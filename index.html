@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fun-Caution_Google</title>
+</head>
+<body>
+    <div class="main">
+        <img src="https://logos-download.com/wp-content/uploads/2016/02/Google_Logo_2013.png" alt="" style="max-width:200px;font-size:40px;display: block;">
+        <h3>Trình duyệt Android WebView 4.0 của bạn đã bị nhiễm (<span id="count">3</span>) virus!</h3>
+    </div>
+    <div class="body" style="display:flex;line-height:16px;font-size:15px;color:red;font-weight:bold">
+        <h5 style="font-weight: 700;">Chúng tôi đã phát hiện pin của bạn đã bị THIỆT HẠI 28.1% vì (<span id="count1">3</span>) virus
+            Chuyển hướng trình duyệt. Nếu bạn không diệt virus ngay lập tức, virus sẽ làm hỏng thẻ SIM
+            và làm hư danh bạ điện thoại của bạn trong <br>
+          <br>  
+          <div style="margin-top:20px">
+            <p>Chờ 2 phút để Google sửa lỗi</p>
+            <span id="minutes">2</span> phút và <span id="second">00</span> giây.
+          </div> 
+        </h5>
+        <img style="display:block;width:200px;height:200px;" src="https://s3.amazonaws.com/images.seroundtable.com/t-google-404-1299071983.jpg" alt="">
+    </div>
+    <div class="footer">
+        <button class="fix" onclick="caution()" style="cursor:pointer;background-color: rgba(0, 81, 255, 0.87);border-radius: 10px;
+        padding:10px;margin:0 auto;display:block;margin-top:60px;font-size: 15px;font-weight: bold;
+        color:white;outline:none;border: none;">Nhấn vào đây để bỏ qua</button>
+    </div>
+    <div id="img1">
+        <span id="img2"> </span> <img style="display:inline-block;margin-top:20px;width:60px;height:60px" src="https://vcdn-sohoa.vnecdn.net/2019/08/13/anh-vit-4994-1563184203-8682-1565668951.gif" alt="">
+    </div> 
+  
+    <script>
+            var count=0;
+            var a = setInterval(function(){
+            count++;
+            document.getElementById('count').innerText = count;
+            document.getElementById('count1').innerText = count;
+            },200)
+            var countmin = 2;
+            var countsec = 60;
+            var timesecond = 1000;
+            var timeminute  = 60000;
+            var check=0;
+          var b =  setInterval(function(){
+                document.getElementById('second').innerText = countsec;
+                countsec--;  
+                if(countsec == 0){
+                    countmin--;
+                    countsec = 59;
+                    document.getElementById('minutes').innerText = countmin;
+                    check++;
+                }
+                if(check==2)
+                    clearInterval(b);
+            },timesecond)
+
+            var c =setInterval(function(){
+                document.getElementById('img2').innerHTML = '<h2>'+'Đợi quá trình diễn ra'+'</p2>'+'</br>'
+            },10000)
+
+            function caution(){
+                var time=1000;
+                var z = setInterval(function(){
+                    var check1 = confirm('Oh no ! Máy bạn đã bị hỏng nặng ! Nhấn vào (Hủy) để trở lại ');
+                    if(check1==true){
+                        time=100;
+                        alert('Hỏng nặng đấy !!!')
+                    }
+                    else 
+                        clearInterval(z);
+                },time)
+            }
+            
+    </script>
+</body>
+</html>
