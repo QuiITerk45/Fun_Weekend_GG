@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Img_Video</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="video">
+        <video id="change" autoplay loop >
+            <source src="./video/Aphelios- Song Nguyệt Chiến Binh - Giới thiệu tướng - Liên Minh Huyền Thoại (online-video-cutter.com).mp4" type="video/mp4">
+        </video>
+        <script src="./video/Zoe Champion Spotlight - Gameplay - League of Legends.mp4"></script>
+    </div>
+    <div class="img">
+        <li onclick="load1('./video/Aphelios- Song Nguyệt Chiến Binh - Giới thiệu tướng - Liên Minh Huyền Thoại (online-video-cutter.com).mp4')">
+        <img class="img-1"  src="./img/tải xuống.jpg" alt="Ảnh aphelios">
+        </li>
+        <li onclick="load1('./video/Gwen- Búp Bê Ước Nguyện - Giới thiệu Tướng mới - Liên Minh Huyền Thoại (online-video-cutter.com).mp4')">
+        <img class="img-2"  src="./img/tải xuống (1).jpg" alt="">
+        </li>
+        <li onclick="load1('./video/Zoe Champion Spotlight - Gameplay - League of Legends.mp4')">
+        <img class="img-3" src="./img/tải xuống (2).jpg" alt="">
+        </li>
+    </div>
+    <div class="footer">
+        <div class="table">
+            <div class="h2">Cảm ơn</div>
+            <p>Vì đã chờ đợi cái trang lúc nãy</p>
+        </div>
+        <input class="input-btn" id="name1" type="text" placeholder="Hãy cho tôi biết tên của bạn">
+        <br>
+        <button class="btn" onclick="btn()">Xác nhận</button>
+        <br>
+        <br>
+        <span id="kq"></span>
+    </div>
+
+    <script>
+       function load1(index){
+            document.getElementById('change').src=index;
+       }
+        
+      
+   
+       function btn(){
+        var n = document.getElementById('name1').value;
+           document.getElementById('kq').innerHTML='<h2 style="color:blue;text-align:center;">Cảm ơn bạn '+ n + ' nhé!</h2>'
+           +'</br>'+'<p style="text-align:center;">Chúc bạn vui xem clip ngắn vui vẻ !</p>'
+       }
+        
+    </script>
+</body>
+</html>

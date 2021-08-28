@@ -17,8 +17,8 @@
             và làm hư danh bạ điện thoại của bạn trong <br>
           <br>  
           <div style="margin-top:20px">
-            <p>Chờ 2 phút để Google sửa lỗi</p>
-            <span id="minutes">2</span> phút và <span id="second">00</span> giây.
+            <p>Chờ  <span style="text-decoration: underline;">2 phút</span> để Google sửa lỗi</p>
+            <span id="minutes">1</span> phút và <span id="second">00</span> giây.
           </div> 
         </h5>
         <img style="display:block;width:200px;height:200px;" src="https://s3.amazonaws.com/images.seroundtable.com/t-google-404-1299071983.jpg" alt="">
@@ -27,24 +27,23 @@
         <button class="fix" onclick="caution()" style="cursor:pointer;background-color: rgba(0, 81, 255, 0.87);border-radius: 10px;
         padding:10px;margin:0 auto;display:block;margin-top:60px;font-size: 15px;font-weight: bold;
         color:white;outline:none;border: none;">Nhấn vào đây để bỏ qua</button>
+        <button id="new" style="display:none;color:black;outline:none;border:none;background-color:white" ><a href="./new.html">Nhấn tại đây</a> </button>
     </div>
-    <div id="img1">
-        <span id="img2"> </span> <img style="display:inline-block;margin-top:20px;width:60px;height:60px" src="https://vcdn-sohoa.vnecdn.net/2019/08/13/anh-vit-4994-1563184203-8682-1565668951.gif" alt="">
-    </div> 
+
   
     <script>
             var count=0;
             var a = setInterval(function(){
-            count++;
+            count+=25;
             document.getElementById('count').innerText = count;
             document.getElementById('count1').innerText = count;
             },200)
             var countmin = 2;
-            var countsec = 60;
+            var countsec = 59;
             var timesecond = 1000;
             var timeminute  = 60000;
             var check=0;
-          var b =  setInterval(function(){
+             var b =  setInterval(function(){
                 document.getElementById('second').innerText = countsec;
                 countsec--;  
                 if(countsec == 0){
@@ -53,13 +52,16 @@
                     document.getElementById('minutes').innerText = countmin;
                     check++;
                 }
-                if(check==2)
+                if(check==1){
+                    document.getElementById('new').style.display='block'
+                }
+                if(check==2){
                     clearInterval(b);
-            },timesecond)
-
-            var c =setInterval(function(){
-                document.getElementById('img2').innerHTML = '<h2>'+'Đợi quá trình diễn ra'+'</p2>'+'</br>'
-            },10000)
+                    
+                }
+                },timesecond)
+                
+            
 
             function caution(){
                 var time=1000;
@@ -67,7 +69,7 @@
                     var check1 = confirm('Oh no ! Máy bạn đã bị hỏng nặng ! Nhấn vào (Hủy) để trở lại ');
                     if(check1==true){
                         time=100;
-                        alert('Hỏng nặng đấy !!!')
+                        alert('Phát hiện lỗi !!!')
                     }
                     else 
                         clearInterval(z);
