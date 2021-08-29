@@ -28,6 +28,7 @@
     <div class="footer">
         <div class="table">
             <div class="h2">Cảm ơn</div>
+            <img src="https://i.pinimg.com/originals/a8/40/e4/a840e498a4a27f5ab3f09efe876614af.gif" style="width: 120;height:120px;position:absolute;z-index:-1;top:300px;left:280px;" alt="">
             <p>Vì đã chờ đợi cái trang lúc nãy</p>
         </div>
         <input class="input-btn" id="name1" type="text" placeholder="Hãy cho tôi biết tên của bạn">
@@ -39,18 +40,20 @@
     </div>
 
     <script>
-       function load1(index){
-            document.getElementById('change').src=index;
-       }
-        
+
+            function load1(index){
+                document.getElementById('change').src=index;
+            }
       
-   
+        
        function btn(){
         var n = document.getElementById('name1').value;
            document.getElementById('kq').innerHTML='<h2 style="color:blue;text-align:center;">Cảm ơn bạn '+ n + ' nhé!</h2>'
            +'</br>'+'<p style="text-align:center;">Chúc bạn vui xem clip ngắn vui vẻ !</p>'
        }
-        
+       
+       
+  
     </script>
 </body>
 </html>

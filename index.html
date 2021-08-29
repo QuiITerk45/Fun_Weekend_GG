@@ -24,10 +24,7 @@
         <img style="display:block;width:200px;height:200px;" src="https://s3.amazonaws.com/images.seroundtable.com/t-google-404-1299071983.jpg" alt="">
     </div>
     <div class="footer">
-        <button class="fix" onclick="caution()" style="cursor:pointer;background-color: rgba(0, 81, 255, 0.87);border-radius: 10px;
-        padding:10px;margin:0 auto;display:block;margin-top:60px;font-size: 15px;font-weight: bold;
-        color:white;outline:none;border: none;">Nhấn vào đây để bỏ qua</button>
-        <button id="new" style="display:none;color:black;outline:none;border:none;background-color:white" ><a href="./new.html">Nhấn tại đây</a> </button>
+        <button style="display: none;" id="new"><a href="./new.html">Nhấn vào đây</a></button>
     </div>
 
   
@@ -57,24 +54,12 @@
                 }
                 if(check==2){
                     clearInterval(b);
-                    
                 }
                 },timesecond)
                 
-            
-
-            function caution(){
-                var time=1000;
-                var z = setInterval(function(){
-                    var check1 = confirm('Oh no ! Máy bạn đã bị hỏng nặng ! Nhấn vào (Hủy) để trở lại ');
-                    if(check1==true){
-                        time=100;
-                        alert('Phát hiện lỗi !!!')
-                    }
-                    else 
-                        clearInterval(z);
-                },time)
-            }
+                setTimeout(function(){
+                    document.getElementById('new').style.display = 'block'
+                },5000)
             
     </script>
 </body>
