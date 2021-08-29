@@ -41,19 +41,15 @@
 
     <script>
 
-            function load1(index){
-                document.getElementById('change').src=index;
-            }
-      
-        
        function btn(){
         var n = document.getElementById('name1').value;
            document.getElementById('kq').innerHTML='<h2 style="color:blue;text-align:center;">Cảm ơn bạn '+ n + ' nhé!</h2>'
            +'</br>'+'<p style="text-align:center;">Chúc bạn vui xem clip ngắn vui vẻ !</p>'
        }
        
-       window.onload=load1();
-  
+       function load1(index){
+                document.getElementById('change').src=index;
+            }
     </script>
 </body>
 </html>
